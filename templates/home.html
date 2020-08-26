@@ -1,0 +1,21 @@
+<h1>Shakespearean text generator</h1>
+<h2>Please set the stage:</h2>
+<ul>
+    <li>Your contribution: Anything goes.</li>
+    <li>Output length:  Sky is the limit.  Start with 500 characters.</li>
+    <li>Mayhem: The Bard lives close to 0.0, try 1.0 for a start.</li>
+</ul>
+<form  method="POST">
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+    {{ form.start_seed.label }} {{form.start_seed}}
+    <br>
+    <br>
+    {{ form.gen_size.label}} {{form.gen_size}}
+    <br>
+    <br>
+    {{form.temp.label}}{{form.temp}}
+    <br>
+    <br>
+    Be patient and {{ form.submit() }}
+</form>
